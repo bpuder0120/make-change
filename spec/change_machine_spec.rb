@@ -1,5 +1,6 @@
 require 'spec_helper'
-require_relative '../lib/change_machine'
+require_relative '../lib/make_change'
+require_relative '../lib/make_cents'
 
 describe '#make_change' do 
 
@@ -13,7 +14,13 @@ describe '#make_change' do
     expect(make_change("100 cents")).to eq("4 quarters")
   end
 
+end
 
-  
-  
+describe '#make_cents' do
+
+  it "makes cents from a given amount of currency" do
+    expect(make_cents("2 dimes, 3 pennies")).to eq("23 cents")
+    expect(make_cents("3 pennies")).to eq("3 cents")
+  end
+
 end

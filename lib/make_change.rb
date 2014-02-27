@@ -1,5 +1,3 @@
-require 'pry'
-
 def make_change(amount)
   remainder = amount.split(" ").first.to_i
   
