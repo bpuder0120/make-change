@@ -9,6 +9,10 @@ describe '#make_change' do
     expect(make_change("14 cents")).to eq("1 dime, 4 pennies")
   end
 
+  it "makes change for quantities up to 100 cents" do
+    expect(make_change("100 cents")).to eq("4 quarters")
+  end
+
 
   
   
